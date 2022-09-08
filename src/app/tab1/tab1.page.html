@@ -1,17 +1,50 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- Home -->
+  <div class="container-home">
+    <h1 class="primary">Foro de preguntas de participación ciudadana</h1>
+    <p class="justify-text">somos quorum foro abierto a los ciudadanos para que dejen su punto de vista frente a decisiones de el manejo de recursos y las acciones que tienen un impacto en el desarrollo de sus comunidades</p>
+    <ion-button color="secondary" class="mb-5" [routerLink]="['/register-user']">
+      Empezar
+    </ion-button>
+    <img src="../../assets/undraw_share_opinion_re_4qk7.svg"
+      alt="image_home"
+      width="80%">
+  </div>
+  <!-- About -->
+  <div class="container-about">
+    <h4 class="secondary">¿QUIENES SOMOS?</h4>
+    <h1 class="primary">Quorum, plataforma por y para los ciudadanos</h1>
+    <p class="justify-text">plataforma con temas preguntas nuevas todos los dias , tú si tú puedes participar y aportar, tambien podrás tomar desiciones con el fin de mejorar el pueblo colombiano</p>
+    <img src="../../assets/undraw_social_interaction_re_dyjh.svg"
+      alt="image_about"
+      width="80%">
+  </div>
+  <!-- Services -->
+  <div class="container-services">
+    <h2 class="secondary services_title">Servicios</h2>
+    <ion-card class="card-services">
+      <ion-card-title>Participación</ion-card-title>
+      <ion-card-content>
+        Participación con libertad de expresión
+      </ion-card-content>
+      <div class="primary-container"></div>
+    </ion-card>
+    <ion-card class="card-services">
+      <ion-card-title>Certificación</ion-card-title>
+      <ion-card-content>
+        Certificación por participar
+      </ion-card-content>
+      <div class="secondary-container"></div>
+    </ion-card>
+    <ion-card class="card-services">
+      <ion-card-title>Para Tí</ion-card-title>
+      <ion-card-content>
+        Preguntas hechas y pensadas para tí
+      </ion-card-content>
+      <div class="tertiary-container"></div>
+    </ion-card>
+  </div>
+  <ion-footer>
+    <p class="text-center">©John Gualteros 2022. Todos los derechos reservados.</p>
+  </ion-footer>
 </ion-content>

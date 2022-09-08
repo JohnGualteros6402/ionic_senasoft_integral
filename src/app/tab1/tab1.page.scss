@@ -1,0 +1,49 @@
+$primary: #3880FF;
+$secondary: #2acfb9;
+$tertiary: #2a51cf;
+.container-home, .container-about, .container-services{
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+  .justify-text{
+    text-align: justify;
+  }
+  .mb-5{
+    margin-bottom: 25px;
+  }
+  .primary-container{
+    background-color: $primary;
+    width: 100%;
+    height: 20px;
+  }
+  .secondary-container{
+    background-color: $secondary;
+    width: 100%;
+    height: 20px;
+  }
+  .tertiary-container{
+    background-color: $tertiary;
+    width: 100%;
+    height: 20px;
+  }
+  .card-services{
+    padding-top: 15px;
+  }
+  h2{
+    font-size: 36px;
+  }
+  .services_title{
+    margin-bottom: 50px;
+  }
+}
+.primary{
+  color: $primary;
+  font-weight: bold;
+}
+.secondary{
+  color: $secondary;
+}
+.text-center{
+  font-size: 12px;
+  text-align: center;
+}

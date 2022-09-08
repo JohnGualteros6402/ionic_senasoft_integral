@@ -1,0 +1,24 @@
+$blue-king: #3880FF;
+.content{
+  margin: 0;
+  padding: 0;
+  .header{
+    background-color: $blue-king;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    h1{
+      font-weight: 700;
+    }
+    h3{
+      font-weight: 400;
+    }
+    p{
+      font-size: 12px;
+    }
+  }
+  .primary{
+    color: $blue-king;
+    font-weight: bold;
+  }
+}

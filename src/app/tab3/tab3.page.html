@@ -1,17 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-content class="content" [fullscreen]="true">
+  <div class="header">
+    <h1>Dashboard</h1>
+    <h3>Bienvenido de nuevo</h3>
+    <p>{{email}}</p>
+  </div>
+  <ion-card *ngFor="let user of users">
+    <ion-card-header>
+      <ion-card-title>{{ user.name }} - {{ user.lastname }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><span class="primary">número de documento</span> : {{user.numberdocument}}</p>
+      <p><span class="primary">dirección : </span> {{user.numberdocument}}</p>
+      <p><span class="primary">correo : </span>{{user.email}}</p>
+      <p><span class="primary">número de celular : </span>{{user.numberphone}}</p>
+      <p><span class="primary">número de fijo : </span>{{user.landline}}</p>
+      <p><span class="primary">fecha de nacimiento : </span>{{user.datebirth}}</p>
+      <p><span class="primary">municipio : </span>{{user.municipality}}</p>
+      <p><span class="primary">estrato : </span>{{user.stratum}}</p>
+      <p><span class="primary">nivel academico : </span>{{user.academiclevel}}</p>
+      <p><span class="primary">sexo : </span>{{user.sex}}</p>
+      <p><span class="primary">afiliación del regimen : </span>{{user.affiliationregime}}</p>
+      <p><span class="primary">cndición de discapacidad : </span>{{user.disabilitycondition}}</p>
+      <p><span class="primary">etnia : </span>{{user.ethnicity}}</p>
+      <p><span class="primary">acceso tecnológico : </span>{{user.technologicalaccess}}</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
