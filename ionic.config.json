@@ -1,0 +1,7 @@
+{
+  "name": "ionic_senasoft_integral",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
