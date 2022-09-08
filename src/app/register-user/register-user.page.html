@@ -3,19 +3,236 @@
     <div class="card">
       <h1 class="text-center">Registarme</h1>
       <form>
-        <!-- input -->
+        <!-- input numberdocument -->
         <ion-item>
-          <ion-label position="floating" color="secondary">Correo electrónico</ion-label>
-          <ion-input class="input"  name="email" id="email"></ion-input>
+          <ion-label position="floating" color="secondary"
+            >Número de documento</ion-label
+          >
+          <ion-input
+            class="input"
+            [(ngModel)]="user.numberdocument"
+            name="numberdocument"
+            id="numberdocument"
+          ></ion-input>
         </ion-item>
+        <!-- input name -->
         <ion-item>
-          <ion-label position="floating" color="secondary">Contraseña</ion-label>
-          <ion-input class="input" type="password" name="password" id="password"></ion-input>
+          <ion-label position="floating" color="secondary">Nombre</ion-label>
+          <ion-input
+            class="input"
+            [(ngModel)]="user.name"
+            name="name"
+            id="name"
+          ></ion-input>
         </ion-item>
-        <ion-button color="primary" class="button" >
-          Iniciar Sesión
-        </ion-button>
+        <!-- input lastname -->
+        <ion-item>
+          <ion-label position="floating" color="secondary">Apellido</ion-label>
+          <ion-input
+            class="input"
+            [(ngModel)]="user.lastname"
+            name="email"
+            id="email"
+          ></ion-input>
+        </ion-item>
+        <!-- input adress -->
+        <ion-item>
+          <ion-label position="floating" color="secondary">Dirección</ion-label>
+          <ion-input
+            class="input"
+            [(ngModel)]="user.address"
+            name="address"
+            id="address"
+          ></ion-input>
+        </ion-item>
+        <!-- input email -->
+        <ion-item>
+          <ion-label position="floating" color="secondary">email</ion-label>
+          <ion-input
+            class="input"
+            [(ngModel)]="user.email"
+            name="email"
+            id="email"
+          ></ion-input>
+        </ion-item>
+        <!-- input numberphone -->
+        <ion-item>
+          <ion-label position="floating" color="secondary"
+            >Número de teléfono</ion-label
+          >
+          <ion-input
+            class="input"
+            [(ngModel)]="user.numberphone"
+            name="numberphone"
+            id="numberphone"
+          ></ion-input>
+        </ion-item>
+        <!-- input landline -->
+        <ion-item>
+          <ion-label position="floating" color="secondary"
+            >Número de Fijo</ion-label
+          >
+          <ion-input
+            class="input"
+            [(ngModel)]="user.landline"
+            name="landline"
+            id="landline"
+          ></ion-input>
+        </ion-item>
+        <!-- input datebirth -->
+        <ion-item>
+          <ion-label position="floating" color="secondary"
+            >Fecha de nacimiento</ion-label
+          >
+          <ion-input
+            class="input"
+            [(ngModel)]="user.datebirth"
+            name="datebirth"
+            id="datebirth"
+          ></ion-input>
+        </ion-item>
+        <!-- input datebirth -->
+        <ion-item>
+          <ion-label position="floating" color="secondary">Municipio</ion-label>
+          <ion-input
+            class="input"
+            [(ngModel)]="user.municipality"
+            name="municipality"
+            id="municipality"
+          ></ion-input>
+        </ion-item>
+        <!-- Select municipality -->
+        <ion-item>
+          <ion-label>Municipio</ion-label>
+          <ion-select
+            name="municipality"
+            [(ngModel)]="user.municipality"
+            id="municipality"
+          >
+            <ion-select-option
+              *ngFor="let municipality of municipies"
+              value="{{ municipality }}"
+              >{{ municipality }}</ion-select-option
+            >
+          </ion-select>
+        </ion-item>
+        <!-- Select stratum -->
+        <ion-item>
+          <ion-label>Estrato</ion-label>
+          <ion-select name="stratum" [(ngModel)]="user.stratum" id="stratum">
+            <ion-select-option value="1">1</ion-select-option>
+            <ion-select-option value="2">2</ion-select-option>
+            <ion-select-option value="3">3</ion-select-option>
+            <ion-select-option value="4">4</ion-select-option>
+            <ion-select-option value="5">5</ion-select-option>
+            <ion-select-option value="6">6</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <!-- Select academic level -->
+        <ion-item>
+          <ion-label>Nivel academico</ion-label>
+          <ion-select
+            name="academiclevel"
+            [(ngModel)]="user.academiclevel"
+            id="academiclevel"
+          >
+            <ion-select-option
+              *ngFor="let academiclevel of academicLevels"
+              value="{{ academiclevel}}"
+              >{{academiclevel}}</ion-select-option
+            >
+          </ion-select>
+        </ion-item>
+        <!-- Select sex -->
+        <ion-item>
+          <ion-label>Sexo</ion-label>
+          <ion-select name="sex" [(ngModel)]="user.sex" id="sex">
+            <ion-select-option *ngFor="let sex of sexs" value="{{ sex}}"
+              >{{sex}}</ion-select-option
+            >
+          </ion-select>
+        </ion-item>
+        <!-- Select sex -->
+        <ion-item>
+          <ion-label>Sexo</ion-label>
+          <ion-select name="sex" [(ngModel)]="user.sex" id="sex">
+            <ion-select-option *ngFor="let sex of sexs" value="{{ sex}}"
+              >{{sex}}</ion-select-option
+            >
+          </ion-select>
+        </ion-item>
+        <!-- Select affiliationregime -->
+        <ion-item>
+          <ion-label>Sexo</ion-label>
+          <ion-select
+            name="affiliationregime"
+            [(ngModel)]="user.affiliationregime"
+            id="affiliationregime"
+          >
+            <ion-select-option value="Subsidiado">Subsidiado</ion-select-option>
+            <ion-select-option value="Conttributivo"
+              >Conttributivo</ion-select-option
+            >
+          </ion-select>
+        </ion-item>
+        <!-- Select affiliationregime -->
+        <ion-item>
+          <ion-label>Afiliación del regimen</ion-label>
+          <ion-select
+            name="affiliationregime"
+            [(ngModel)]="user.affiliationregime"
+            id="affiliationregime"
+          >
+            <ion-select-option value="Subsidiado">Subsidiado</ion-select-option>
+            <ion-select-option value="Conttributivo"
+              >Conttributivo</ion-select-option
+            >
+          </ion-select>
+        </ion-item>
+        <!-- Select ethnicity -->
+        <ion-item>
+          <ion-label>Etnia</ion-label>
+          <ion-select
+            name="ethnicity"
+            [(ngModel)]="user.ethnicity"
+            id="ethnicity"
+          >
+            <ion-select-option
+              *ngFor="let ethnicity of ethnicities"
+              value="{{ ethnicity }}"
+              >{{ ethnicity }}</ion-select-option
+            >
+          </ion-select>
+        </ion-item>
+        <!-- Select technologicalaccess -->
+        <ion-item>
+          <ion-label>Acceso tecnológico</ion-label>
+          <ion-select
+            name="technologicalaccess"
+            [(ngModel)]="user.technologicalaccess"
+            id="technologicalaccess"
+          >
+            <ion-select-option value="SI">SI</ion-select-option>
+            <ion-select-option value="NO">NO</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <!-- input password -->
+        <ion-item>
+          <ion-label position="floating" color="secondary"
+            >Contraseña</ion-label
+          >
+          <ion-input
+            class="input"
+            [(ngModel)]="user.numberdocument"
+            type="password"
+            name="password"
+            id="password"
+          ></ion-input>
+        </ion-item>
+        <ion-button color="primary" class="button"> Registrarme </ion-button>
       </form>
+      <a [routerLink]="['/tabs/tab1']" class="text-center">Volver Atras</a> <br>
+      <a [routerLink]="['/tabs/tab2']" class="text-center">Iniciar Sesión</a>
     </div>
   </div>
 </ion-content>
